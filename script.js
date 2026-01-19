@@ -36,8 +36,48 @@ function copyToClipboard(text,int) {
     
     // Remove the temporary element
     document.body.removeChild(textarea);
+}function copyToClipboard(text,int) {
+    // Create a temporary textarea element
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.style.position = 'fixed';
+    textarea.style.opacity = '0';
+    document.body.appendChild(textarea);
+    
+    // Select and copy the text
+    textarea.select();
+    textarea.setSelectionRange(0, 99999); // For mobile devices
+    
+    try {
+        document.execCommand('copy');
+    } catch (err) {
+        console.error('Failed to copy:', err);
+    }
+    
+    // Remove the temporary element
+    document.body.removeChild(textarea);
 }
-
+function copyToClipboard(text,int) {
+    // Create a temporary textarea element
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.style.position = 'fixed';
+    textarea.style.opacity = '0';
+    document.body.appendChild(textarea);
+    
+    // Select and copy the text
+    textarea.select();
+    textarea.setSelectionRange(0, 99999); // For mobile devices
+    
+    try {
+        document.execCommand('copy');
+    } catch (err) {
+        console.error('Failed to copy:', err);
+    }
+    
+    // Remove the temporary element
+    document.body.removeChild(textarea);
+}
 // Function to show notification
 function showNotification(message) {
     notification.textContent = message;
