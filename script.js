@@ -46,7 +46,7 @@ function showNotification(message) {
     // Hide notification after 2 seconds
     setTimeout(() => {
         notification.classList.remove('show');
-    }, 2000);
+    }, 400);
 }
 
 // Add keyboard accessibility
